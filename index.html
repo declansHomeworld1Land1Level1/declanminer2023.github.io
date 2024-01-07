@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<h1>Declan's Website</h1>
+<div>https://declamurphyprogramming.w3spaces.com</div>
+<div>Hello! This is my secondary website. Don't worry about the other one, that one is still working and active! Still maintained today!</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oregon Time</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 6rem;
+            color: #333;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="clock"></h1>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            // Set offset to Pacific Standard Time (PST)
+            const utcOffset = -7 * 60 * 60 * 1000;
+            const oregonTime = new Date(now.getTime() + utcOffset);
+            
+            let hours = oregonTime.getHours().toString().padStart(2, "0");
+            let minutes = oregonTime.getMinutes().toString().padStart(2, "0");
+            let seconds = oregonTime.getSeconds().toString().padStart(2, "0");
+
+            document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        // Update time every second
+        setInterval(() => {
+            updateTime();
+        }, 1000);
+
+        // Initial load
+        window.onload = () => {
+            updateTime();
+        };
+    </script>
+</body>
+</html>
