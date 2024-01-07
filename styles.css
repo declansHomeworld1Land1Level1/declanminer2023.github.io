@@ -1,0 +1,122 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px;
+    background-color: rgb(27, 30, 35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.logo img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.content {
+    padding: 80px 20px 20px 20px;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.server-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.members-count {
+    display: block;
+    color: rgb(108, 117, 125);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: rgb(108, 117, 125);
+    font-size: 0.9em;
+}
+
+.invite-btn {
+    display: inline-block;
+    background-color: rgb(27, 30, 35);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.invite-btn:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.online-users {
+    overflow-y: scroll;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+}
+
+.user-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.nickname {
+    color: rgb(108, 117, 125);
+    font-size: 0.9em;
+}
