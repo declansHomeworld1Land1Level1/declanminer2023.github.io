@@ -4,7 +4,7 @@ const github = new GitHub({
 });
 
 // The GitHub username of the account you want to track
-const username = 'octocat';
+const username = 'Boonk8812';
 
 // The file extension you want to track (e.g. "js")
 const fileExtension = 'js';
