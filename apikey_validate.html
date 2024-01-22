@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Key Validation</title>
+    <script>
+        function validateAPIKey(apiKey) {
+            var headerBase64 = /^[A-Za-z0-9+/=]+$/;
+            var authorizationKey = /^[A-Za-z0-9]{15}$/;
+            var securityCPAT = /^[A-Za-z0-9]{8}$/;
+            var apiKeyPattern = /^[A-Za-z0-9]{6}$/;
+
+            if (headerBase64.test(apiKey) || authorizationKey.test(apiKey) || securityCPAT.test(apiKey) || apiKeyPattern.test(apiKey)) {
+                console.log("Valid API Key!");
+            } else {
+                console.log("Invalid API Key! Please check that you have typed it in correctly or have the right data.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>API Key Validation</h1>
+    <input type="text" id="apiKeyInput" placeholder="Enter API Key">
+    <button onclick="validateAPIKey(document.getElementById('apiKeyInput').value)">Validate</button>
+</body>
+</html>
