@@ -1,7 +1,7 @@
 {
   "name": "ByteAPI",
   "version": "1.0.0",
-  "description": "A Java API for interacting with Byte",
+  "description": "A Java API for interacting with ByteBot",
   "dependencies": {
     "com.google.code.gson": "^2.8.6",
     "org.apache.httpcomponents.httpclient": "^4.5.13"
