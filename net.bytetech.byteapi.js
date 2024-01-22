@@ -1,7 +1,7 @@
 const ByteAPI = require("byteapi");
 
 // Create a client
-const client = new ByteAPI.Client("YOUR_API_KEY");
+const client = new ByteAPI.Client("");
 
 // Get the current user
 const user = client.getUser();
